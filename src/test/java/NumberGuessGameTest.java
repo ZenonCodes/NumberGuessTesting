@@ -46,12 +46,24 @@ class NumberGuessGameTest {
     }
 
     @Test
-    void getGuesses() {
+    void getGuessesSizeIsLimitWhenGuessesSet() {
         NumberGuessGame testGame = new NumberGuessGame();
         testGame.setGuesses();
 
         int actual = testGame.getGuesses().size();
         int expected = testGame.getLimit();
+
+        assertEquals(actual,expected);
+
+
+    }
+
+    @Test
+    void getGuessesSizeIsZeroWhenGuessesNotSet() {
+        NumberGuessGame testGame = new NumberGuessGame();
+
+        int actual = testGame.getGuesses().size();
+        int expected = 0;
 
         assertEquals(actual,expected);
 
