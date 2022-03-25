@@ -32,7 +32,7 @@ class NumberGuessGameTest {
 
 
     @Test
-    void getCorrectGuess() {
+    void getCorrectGuessFetchesSetGuess() {
         NumberGuessGame testGame = new NumberGuessGame();
 
         int expected = 5;
@@ -66,6 +66,7 @@ class NumberGuessGameTest {
         int actual = random.nextInt(0,6);
         testGame.setCorrectGuess(actual);
         int expected = testGame.getCorrectGuess();
+
         assertEquals(expected, actual);
 
     }
